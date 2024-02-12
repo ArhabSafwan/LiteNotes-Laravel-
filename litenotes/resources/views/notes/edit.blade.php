@@ -16,8 +16,10 @@
                         autocomplete="off" :value="@old('title', $note->title)"></x-input>
 
 
-                    <textarea name="text" rows="10" field="text" placeholder="Start typing here..." class="w-full mt-6"
-                        :value="@old('text', $note->text)"class="w-full mt-5 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"></textarea>
+                    <textarea name="text" rows="10" field="text" placeholder="Start typing here..."
+                        class="w-full mt-6 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm">
+                            {{ old('text', $note->text) }}
+                        </textarea>
                     <x-button class="mt-5">Save</x-button>
 
                     <x-button class="mt-6">Save Note</x-button>

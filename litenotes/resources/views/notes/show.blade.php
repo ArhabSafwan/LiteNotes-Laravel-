@@ -14,6 +14,11 @@
             </div>
             <div class="flex">
                 <a href="{{ route('notes.edit',  $note->id) }}"><x-button class="ml-auto">Edit</x-button></a>
+                <form action="{{ route('notes.destroy', $note->id) }}" method="POST">
+                    @method('delete')
+                    @csrf
+                    <x-button class="ml-4" type="submit">Delete</x-button>
+                </form>
             </div>
             <div class="my-6 p-6 bg-white border-b border-gray-200 shadow-sm sm:rounded-lg">
                 <h2 class="font-bold text-2xl">

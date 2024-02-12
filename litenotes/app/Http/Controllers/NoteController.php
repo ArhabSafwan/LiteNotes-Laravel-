@@ -60,7 +60,7 @@ class NoteController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('notes.edit')->with('note',$id);
     }
 
     /**
